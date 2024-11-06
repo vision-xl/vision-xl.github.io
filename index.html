@@ -1,0 +1,570 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="solving-video-inverse"/>
+  <meta property="og:description" content="Project Page for solving-video-inverse"/>
+  <meta property="og:url" content="solving-video-inverse.github.io/main"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/banner_rainbow.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="solving-video-inverse">
+  <meta name="twitter:description" content="Project Page for solving-video-inverse">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/banner_rainbow.png">
+  <meta name="twitter:card" content="Project Page for solving-video-inverse">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>solving-video-inverse</title>
+  <link rel="icon" type="image/x-icon" href="">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <script
+  defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+  ></script>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+  />
+
+  <style>
+  .center-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .eps_null {
+    color: rgb(53, 144, 243);
+  }
+  .eps_cfg {
+    color: rgb(231, 111, 81);
+  }
+  .cfgpp{
+    color: rgb(42, 157, 143);
+  }
+
+  hr.solid {
+  border-top: 2px solid #bbb;
+  }
+
+  table, td, th {
+  border: 1px solid black;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  </style>
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span class="video-timedeconv">Solving Video Inverse Problems Using Image Diffusion Models</h1>
+            
+                  <!-- PDF Link 
+                  <span class="link-block">
+                    <a href="static/pdfs/CFGPP.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    </ARXIV>
+                    <span class="icon">
+                      <i class="fas fa-file-pdf "></i>
+                    </span>
+                    <span>PDF</span>
+                  </a>
+                  </span> -->
+
+                  <!-- PDF Link -->
+<!--                   <span class="link-block">
+                    <a href="https://arxiv.org/abs/2409.02574" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    </ARXIV>
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                  </span> -->
+              
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/solving-video-inverse/codes" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                  </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser Carousel-->
+<section class="hero teaser">
+
+  <div class="columns is-centered" style="margin-top:-20px">
+    <h1 class="is-size-3"> 
+      <mark style="background: rgb(255, 255, 102)"> Solving video inverse problems using only image diffusion models, 
+  </div>
+  <div class="columns is-centered" style="margin-top:-10px">
+    <h1 class="is-size-3"> 
+      <mark style="background: rgb(255, 255, 102)"> with batch-consistent sampling stretagy.
+      </mark></h1>
+  </div> 
+
+  <div class="hero-body">
+    <div class="container">
+    
+      <div class="columns is-centered" style="margin-top:20px">
+        <h1 class="is-size-4"> Reconstruction Results for temporal degradations</h1>
+        <h1 class="is-size-5", style="margin-top:4px"> &nbsp;(256x256 ADM) </h1>
+      </div>  
+
+      <div id="results-carousel" class="carousel results-carousel" style="margin-top:-25px">
+       <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/13_1.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 13-frame averaged”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/13_2.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 13-frame averaged”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/13_3.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 13-frame averaged”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/13_4.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 13-frame averaged”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/7_1.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 7-frame averaged”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/7_2.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 7-frame averaged”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/7_3.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 7-frame averaged”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/7_4.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 7-frame averaged”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/g7_1.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 convolved with Gaussian PSF”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/g7_2.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 convolved with Gaussian PSF”
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div class="center-item">
+        <img src="static/images/g7_3.gif" alt="MY ALT TEXT"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          “16-frames 256x256 convolved with Gaussian PSF”
+        </h2>
+      </div>
+  </div>
+  </div>
+
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+
+          <p style="font-size:18px;">
+         Diffusion model-based inverse problem solvers (DIS) have emerged as state-of-the-art approaches for addressing inverse problems. 
+         However, their application to video inverse problems arising from spatio-temporal degradation remains largely unexplored.
+         In response, we introduce an innovative video inverse solver using only image diffusion models.
+         Specifically, our method treats the <strong> time </strong> dimension of a video as the <strong> batch </strong> dimension of image diffusion models, 
+         thereby solving spatio-temporal optimization problems within denoised spatio-temporal batches derived from each image diffusion model.
+         We address the <strong> batch inconsistency </strong> issue in diffusion models by controlling batch-stochasticity,
+         thereby enabling <strong> batch-consistent sampling</strong>.
+         <br>
+
+        <table style="width: 80%; margin-left:auto; margin-right:auto; text-align: center; 
+        margin-top:20px; margin-bottom:20px; background-color: rgb(245, 242, 237);" border="3" cellpadding="3">
+          <tbody>
+            <tr>
+              <td style="width: 30%; font-size: 22px;"></td>
+              <td style="width: 50%; font-size: 22px;"><strong>Ours &#128513; </strong></td>
+            </tr>
+            <tr>
+              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Video reconstruction</td>
+              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Better Reconstruction Quality <br> & Batch-Consistent Samples</td>
+            </tr>
+            <tr>
+              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Memory effieciency</td>
+              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Requires 13GB VRAM for 16-frame videos, maximum 32-frame in 24 GB VRAM.</td>
+            </tr>
+            <tr>
+              <td style="width: 30%; font-size: 20px; vertical-align:middle;">Accessibility</td>
+              <td style="width: 50%; font-size: 20px; vertical-align:middle;">Using open-sourced image diffusion model (ADM)</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        Experimental results demonstrate that our method effectively addresses various temporal and spatial degradations in video inverse problems, 
+          achieving state-of-the-art reconstructions.
+      </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Batch reconstruction -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Batch-consistent Sampling Stretagy</h2>
+        <div class="content has-text-justified">
+          <div class="center-item">
+          <img src="static/images/1.png" alt="1" style="width: 80%"/>
+          </div>
+          <p style=" font-size:18px;">
+            Geometric illustration of the sampling path evolution.
+            (a) Common batch sampling in image diffusion models is batch-independent. 
+            (b) In standard batch-consistent sampling, identical images are sampled by synchronizing the stochastic noise components. 
+            (c) Frame-dependent perturbation through multi-step CG ensures that the batch-consistent sampling meets the spatio-temporal data consistency.
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Batch reconstruction -->
+    
+<!-- Method -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/2.png" alt="2"/>
+          <p style=" font-size:18px;">
+            Illustration of the intermediate sampling process in our video inverse problem solver that leverages only image diffusion models.
+            By taking <strong> multi-step CG </strong> in the video space of the Tweedie denoised manifold, we iteratively solve the video inverse problem.
+            We synchronize the <strong> stochastic noise components </strong> in the reverse diffusion process
+            to ensure <strong> batch-consistent sampling </strong> with state-of-the-art reconstruction performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Method -->
+
+<!-- Results -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Experimental results</h2>
+        <div class="content has-text-justified">
+          <p style=" font-size:18px;">
+            As demonstrated by the teaser videos, we successfully solved temporal degradations with various PSFs.
+            Even with the additional spatial degradations, 
+            our method demonstrates robustness against various combinations of spatio-temporal degradations.
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Results -->
+
+<!-- Teaser Carousel-->
+          <section class="hero teaser">
+            
+            <div class="hero-body">
+                <div class="container">
+              
+                <div class="columns is-centered" style="margin-top:20px">
+                  <h1 class="is-size-4"> Reconstruction Results for spatio-temporal degradations</h1>
+                  <h1 class="is-size-5", style="margin-top:4px"> &nbsp;(256x256 ADM) </h1>
+                </div>  
+          
+                <div id="results-carousel" class="carousel results-carousel" style="margin-top:-25px">
+                 <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/sr_1.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “SRx4 & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/sr_2.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “SRx4 & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/sr_3.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “SRx4 & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/deblur_1.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “Deblur (&sigma; = 2.0) & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/deblur_2.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “Deblur (&sigma; = 2.0) & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/deblur_3.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “Deblur (&sigma; = 2.0) & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/deblur_4.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “Deblur (&sigma; = 2.0) & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/inpaint_1.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “Inpaint (50%) & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/inpaint_2.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “Inpaint (50%) & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/inpaint_3.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “Inpaint (50%) & 7-frame averaged”
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <div class="center-item">
+                  <img src="static/images/inpaint_4.gif" alt="MY ALT TEXT"/>
+                  </div>
+                  <h2 class="subtitle has-text-centered">
+                    “Inpaint (50%) & 7-frame averaged”
+                  </h2>
+                </div>
+            </div>
+            </div>
+          
+          </section>
+        <!-- End teaser video -->
+
+<!-- Visualization -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Visualization with Comparative Methods</h2>
+        <div class="content has-text-justified">
+          <div class="center-item">
+          <img src="static/images/video_results.gif" alt="2"/>
+          </div>
+          <p style=" font-size:18px;">
+            We provide visualization of reconstruction results with comparative methods in video format.
+            We also provide ablation study results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Visualization -->
+    
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html> 
