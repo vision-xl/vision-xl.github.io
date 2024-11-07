@@ -579,7 +579,7 @@
           </div>
           <p style=" font-size:18px;">
             Illustration of batch-consistent inversion to initialize the informative latents by inverting the measurement frame and replicating it.
-            Rather using uninformative Gaussian prior, batch-consistent inversion not only offers a <strong>good</strong> initialization but also <strong>reduces</strong> the overall sampling time.
+            Rather using uninformative Gaussian prior, batch-consistent inversion not only offers a <strong>good</strong> initialization for temporal consistency but also <strong>reduces</strong> the overall sampling time.
           </p>
       </div>
     </div>
@@ -597,6 +597,7 @@
         <div class="content has-text-justified">
           <div class="center-item">
           <img src="images/mani.jpg" alt="3" style="width: 33%"/>
+          </div>
           <p style=" font-size:18px;">
            Geometric illustration of the sampling path evolution.
            Parallel sampling refines each latent, while decoded frame-dependent perturbation using multi-step CG ensures spatiotemporal data consistency.
