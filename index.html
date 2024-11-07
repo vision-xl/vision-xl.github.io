@@ -505,13 +505,12 @@
         <div class="content has-text-justified">
 
           <p style="font-size:18px;">
-         Diffusion model-based inverse problem solvers (DIS) have emerged as state-of-the-art approaches for addressing inverse problems. 
-         However, their application to video inverse problems arising from spatio-temporal degradation remains largely unexplored.
-         In response, we introduce an innovative video inverse solver using only image diffusion models.
-         Specifically, our method treats the <strong> time </strong> dimension of a video as the <strong> batch </strong> dimension of image diffusion models, 
-         thereby solving spatio-temporal optimization problems within denoised spatio-temporal batches derived from each image diffusion model.
-         We address the <strong> batch inconsistency </strong> issue in diffusion models by controlling batch-stochasticity,
-         thereby enabling <strong> batch-consistent sampling</strong>.
+         Diffusion model-based inverse problem solvers (DIS) are now leading techniques for solving inverse problems.
+         Recent extensions have adapted these models to solve video inverse problems using image diffusion models, 
+         but they face limitations such as restricted resolution (256x256) and dependency on additional pre-trained modules like optical flow estimators and task-specific restoration models.
+         In response, we introduce a novel framework for solving <strong>high-definition</strong> video inverse solver using only latent diffusion models.
+         For efficient high-resolution processing on a single GPU, we introduce a <strong>pseudo-batch consistent sampling</strong> strategy. 
+         Additionally, to enhance temporal consistency, we implement <strong>batch-consistent inversion</strong>, an initialization method that incorporates informative latents from the measurement frame.
          <br>
 
         <table style="width: 80%; margin-left:auto; margin-right:auto; text-align: center; 
@@ -536,8 +535,8 @@
           </tbody>
         </table>
         
-        Experimental results demonstrate that our method effectively addresses various temporal and spatial degradations in video inverse problems, 
-          achieving state-of-the-art reconstructions.
+       By integrating with SDXL, our framework achieves state-of-the-art video reconstruction across a wide range of spatio-temporal inverse problems, 
+            including complex combinations of frame averaging and various spatial degradations, such as deblurring, super-resolution, and inpainting.
       </p>
 
         </div>
