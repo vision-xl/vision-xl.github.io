@@ -546,28 +546,26 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Batch reconstruction -->
+<!-- Batch inversion -->
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-sixths">
-        <h2 class="title is-3">Batch-consistent Sampling Stretagy</h2>
+        <h2 class="title is-3">Batch-consistent Inversion (Initialization)</h2>
         <div class="content has-text-justified">
           <div class="center-item">
-          <img src="static/images/1.png" alt="1" style="width: 80%"/>
+          <img src="images/init.jpg" alt="1" style="width: 80%"/>
           </div>
           <p style=" font-size:18px;">
-            Geometric illustration of the sampling path evolution.
-            (a) Common batch sampling in image diffusion models is batch-independent. 
-            (b) In standard batch-consistent sampling, identical images are sampled by synchronizing the stochastic noise components. 
-            (c) Frame-dependent perturbation through multi-step CG ensures that the batch-consistent sampling meets the spatio-temporal data consistency.
+            Illustration of batch-consistent inversion to initialize the informative latents by inverting the measurement frame and replicating it.
+            Rather using uninformative Gaussian prior, batch-consistent inversion not only offers a <strong>good</strong> initialization but also <strong>reduces</strong> the overall sampling time.
           </p>
       </div>
     </div>
   </div>
 </div>
 </section>
-<!-- End Batch reconstruction -->
+<!-- End Batch inversion -->
     
 <!-- Method -->
 <section class="section hero is-light">
@@ -576,12 +574,12 @@
       <div class="column is-four-sixths">
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
-          <img src="static/images/2.png" alt="2"/>
+          <img src="images/main.jpg" alt="2"/>
           <p style=" font-size:18px;">
-            Illustration of the intermediate sampling process in our video inverse problem solver that leverages only image diffusion models.
-            By taking <strong> multi-step CG </strong> in the video space of the Tweedie denoised manifold, we iteratively solve the video inverse problem.
-            We synchronize the <strong> stochastic noise components </strong> in the reverse diffusion process
-            to ensure <strong> batch-consistent sampling </strong> with state-of-the-art reconstruction performance.
+            Illustration of the intermediate sampling process in our method using only latent diffusion models.
+            We conduct parallel sampling process of each frame latents to acquire Tweedie denoised <strong>pseudo-batch</strong>.
+            By taking <strong>multi-step CG</strong> in pixel(decoded) space of the entire Tweedie denoised batch, we optimize the video inverse problem.
+            We re-encode the optimized video into latent(encoded) space with <strong>scheduled low-pass filtering</strong>.
           </p>
         </div>
       </div>
@@ -590,141 +588,23 @@
 </section>
 <!-- End Method -->
 
-<!-- Results -->
+<!-- Manifold -->
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-sixths">
-        <h2 class="title is-3">Experimental results</h2>
+        <h2 class="title is-3">Sampling path evolution</h2>
         <div class="content has-text-justified">
           <p style=" font-size:18px;">
-            As demonstrated by the teaser videos, we successfully solved temporal degradations with various PSFs.
-            Even with the additional spatial degradations, 
-            our method demonstrates robustness against various combinations of spatio-temporal degradations.
+           Geometric illustration of the sampling path evolution.
+           Parallel sampling refines each latent, while decoded frame-dependent perturbation using multi-step CG ensures spatiotemporal data consistency.
           </p>
       </div>
     </div>
   </div>
 </div>
 </section>
-<!-- End Results -->
-
-<!-- Teaser Carousel-->
-          <section class="hero teaser">
-            
-            <div class="hero-body">
-                <div class="container">
-              
-                <div class="columns is-centered" style="margin-top:20px">
-                  <h1 class="is-size-4"> Reconstruction Results for spatio-temporal degradations</h1>
-                  <h1 class="is-size-5", style="margin-top:4px"> &nbsp;(256x256 ADM) </h1>
-                </div>  
-          
-                <div id="results-carousel" class="carousel results-carousel" style="margin-top:-25px">
-                 <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/sr_1.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “SRx4 & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/sr_2.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “SRx4 & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/sr_3.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “SRx4 & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/deblur_1.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “Deblur (&sigma; = 2.0) & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/deblur_2.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “Deblur (&sigma; = 2.0) & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/deblur_3.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “Deblur (&sigma; = 2.0) & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/deblur_4.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “Deblur (&sigma; = 2.0) & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/inpaint_1.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “Inpaint (50%) & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/inpaint_2.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “Inpaint (50%) & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/inpaint_3.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “Inpaint (50%) & 7-frame averaged”
-                  </h2>
-                </div>
-                <div class="item">
-                  <!-- Your image here -->
-                  <div class="center-item">
-                  <img src="static/images/inpaint_4.gif" alt="MY ALT TEXT"/>
-                  </div>
-                  <h2 class="subtitle has-text-centered">
-                    “Inpaint (50%) & 7-frame averaged”
-                  </h2>
-                </div>
-            </div>
-            </div>
-          
-          </section>
-        <!-- End teaser video -->
+<!-- End Manifold -->
 
 <!-- Visualization -->
 <section class="section hero is-light">
