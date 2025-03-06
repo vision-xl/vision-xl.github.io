@@ -556,7 +556,7 @@
           <img src="images/method.jpg" alt="1"/>
           <p style=" font-size:18px;">
             Illustration of the intermediate sampling process in our method using only latent diffusion models.
-            We conduct parallel sampling process of each frame latents to acquire Tweedie denoised <strong>pseudo-batch</strong>.
+            We conduct a pseudo-batch sampling strategy to acquire a Tweedie-denoised <strong>pseudo-batch</strong> for GPU efficiency when conducting modern latent diffusion models.
             By taking <strong>multi-step CG</strong> in pixel(decoded) space of the entire Tweedie denoised batch, we optimize the video inverse problem.
             We re-encode the optimized video into latent(encoded) space with <strong>scheduled low-pass filtering</strong>.
           </p>
@@ -572,14 +572,14 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-sixths">
-        <h2 class="title is-3">Batch-consistent Inversion (Initialization)</h2>
+        <h2 class="title is-3">Pseudo-batch Inversion (Initialization)</h2>
         <div class="content has-text-justified">
 <!--           <div class="center-item">
           <img src="images/initialization.png" alt="2" style="width: 40%"/>
           </div> -->
           <p style=" font-size:18px;">
-            Illustration of batch-consistent inversion to initialize the informative latents by inverting the measurement frame and replicating it.
-            Rather using uninformative Gaussian prior, batch-consistent inversion not only offers a <strong>good</strong> initialization for temporal consistency but also <strong>reduces</strong> the overall sampling time.
+            Pseudo-batch inversion initializes the informative latents by inverting the measurement frames.
+            Rather using uninformative Gaussian prior, pseudo-batch inversion not only offers a <strong>good</strong> initialization for temporal consistency but also <strong>reduces</strong> the overall sampling time.
           </p>
       </div>
     </div>
@@ -600,7 +600,7 @@
           </div>
           <p style=" font-size:18px;">
            Geometric illustration of the sampling path evolution.
-           Parallel sampling refines each latent, while decoded frame-dependent perturbation using multi-step CG ensures spatiotemporal data consistency.
+           Pseudo-batch consistent sampling refines each latent, while decoded frame-dependent perturbation using multi-step CG ensures spatiotemporal data consistency.
           </p>
       </div>
     </div>
